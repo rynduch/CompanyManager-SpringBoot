@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+}
+
+.sidebar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    min-width: 100px;
+    width: 100px;
+    height: 100vh;
+    padding: 3rem 1.2rem;
+    color: #ffffff;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background-color: #81c6ff;
+}
+
+.sidebar:hover {
+    width: 300px;
+}
+
+.options {
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.options li {
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
+.options li:hover, .active {
+    background-color: #2fa1ff;
+}
+
+.options a {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.options a span {
+    overflow: hidden;
+}
+
+.options a i {
+    font-size: 1.1rem;
+}
+
+label {
+    color: #000000;
+    padding: 5px 5px;
+    width: 100px;
+    display: inline-block;
+    font-size: 14px;
+}
+
+p {
+    color: #00003a;
+    margin: 15px;
+}
+
+.header--text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main--content {
+    padding: 1.7rem;
+    width: 100%;
+}
+
+input[type=text], input[type=date], input[type=number] {
+    width: 50%;
+    color: black;
+    padding: 5px 5px;
+    cursor: text;
+    border: solid #b9b9b9 1px ;
+    border-radius: 7px;
+    margin: 7px;
+}
+
+input[type=submit], input[type=button] {
+    background-color: #2fa1ff;
+    color: #ffffff;
+    padding: 7px 25px;
+    border-width: 1px;
+    border-radius: 15px;
+    border-color: #e7f2fa;
+    cursor: pointer;
+    transition: opacity 0.15s;
+}
+
+input[type=button] {
+    background-color: #e06565;
+}
+
+input[type=submit]:hover, input[type=button]:hover {
+    opacity: 0.7;
+}
+
+input[type=submit]:active, input[type=button]:active {
+    opacity: 0.5;
+}
+
+form {
+    background-color: #f3f3f3;
+    padding: 20px 10px;
+    border-radius: 10px;
+    border-width: 1px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+select {
+    padding: 5px 5px;
+    border: 1px solid #b9b9b9;
+    border-radius: 7px;
+    margin: 7px;
+}
+
+.table {
+    width: 100%;
+}
+
+.table td,
+.table th {
+    padding: 10px 20px;
+}
+
+.table tbody tr:nth-of-type(even){
+    background: #eeeeee;
+}
+
+.table tbody tr:last-of-type {
+    border-bottom: 2px solid #028dff;
+}
+
+.header--link {
+    padding: 10px;
+    font-size: 13px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
