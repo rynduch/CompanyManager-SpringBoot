@@ -17,15 +17,15 @@ CREATE TABLE `employees` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 INSERT INTO `employees` (`name`, `lastname`, `date_of_birth`, `salary`, `e_condition`) VALUES 
 ("Jan", "Kowalski", '1998-01-25', 8000, 'OBECNY'),
-("Kim", "Kardashian", '1980-10-21', 7000, 'NIEOBECNY'),
-("Jennifer", "Lawrence", '1990-08-15', 9500, 'DELEGACJA'),
-("Christian", "Bale", '1974-01-30', 6000, 'CHORY'),
-("Chris", "Evans", '1981-06-13', 7000, 'NIEOBECNY'),
-("Angelina", "Jolie", '1975-06-04', 8000, 'OBECNY'),
-("Tom", "Cruise", '1962-06-03', 5000, 'OBECNY'),
-("Robert", "Downey Jr.", '1998-04-04', 7500, 'DELEGACJA'),
-("Meryl", "Streep", '1998-06-22', 8500, 'OBECNY'),
-("Selena", "Gomez", '1992-07-22', 9000, 'OBECNY'); 
+("Dariusz", "Makowski", '1980-10-21', 7000, 'NIEOBECNY'),
+("Juliusz", "Kaczmarczyk", '1990-08-15', 9500, 'DELEGACJA'),
+("Izabela", "Walczak", '1974-01-30', 6000, 'CHORY'),
+("Bartłomiej", "Andrzejewski", '1981-06-13', 7000, 'NIEOBECNY'),
+("Maciej", "Woźniak", '1975-06-04', 8000, 'OBECNY'),
+("Cezary", "Pawlak", '1962-06-03', 5000, 'OBECNY'),
+("Robert", "Szymczak", '1998-04-04', 7500, 'DELEGACJA'),
+("Zofia", "Głowacka", '1998-06-22', 8500, 'OBECNY'),
+("Ewelina", "Ziółkowska", '1992-07-22', 9000, 'OBECNY');
 SELECT * FROM `employees`;
 
 CREATE TABLE `e_groups` (
@@ -64,8 +64,8 @@ CREATE TABLE `rates` (
     FOREIGN KEY (`group_id`) REFERENCES `e_groups`(`group_id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 INSERT INTO `rates` (`value`, `group_id`,`date`, `comment`) VALUES 
-(3, 1,'2023-06-12', "Nadgodziny"), 
-(2, 2, '2023-09-10', "Trzymanie sie deadline'ow"),
-(5, 3,'2023-12-10', "Praca w weekend"),
-(6, 3,'2022-12-24', "Praca w swieta");
+(3, 1,'2023-06-12', "Projekt 1"), 
+(2, 2, '2023-09-10', "Projekt 2"),
+(5, 3,'2023-12-10', "Projekt 3"),
+(6, 3,'2022-12-24', "Projekt 4");
 SELECT * FROM `rates`;

@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
-
 <body>
-
 <div class="sidebar">
     <ul class="options">
         <li>
@@ -32,103 +30,105 @@
         </li>
     </ul>
 </div>
-
 <div class="main--content">
-<h1>Company Manager</h1>
-
+    <h1>Company Manager</h1>
     <div class="header">
         <p id="scroll_employee" class="header--text">Employees</p>
         <a href="/api/employee_table" class="header--link">View table</a>
     </div>
-
-            <p>Add</p>
-            <form action="/api/employee" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br><br>
-
-                <label for="lastname">Lastname:</label>
-                <input type="text" id="lastname" name="lastname" required><br><br>
-
-                <label for="dob">Date of Birth:</label>
-                <input type="date" id="dob" name="dob" required><br><br>
-
-                <label for="salary">Salary:</label>
-                <input type="number" id="salary" name="salary" required min="0"><br><br>
-
-                <label for="condition">Condition:</label>
-                <select id="condition" name="condition" required>
-                    <option value="OBECNY">OBECNY</option>
-                    <option value="DELEGACJA">DELEGACJA</option>
-                    <option value="CHORY">CHORY</option>
-                    <option value="NIEOBECNY">NIEOBECNY</option>
-                </select><br><br>
-                <input type="submit" value="Submit">
-            </form>
-            <p>Change condition</p>
-            <form action="/api/employee_condition" method="POST">
-                <label for="e_id">ID:</label>
-                <input type="number" id="e_id" name="id" required min="1"><br><br>
-
-                <label for="e_condition">Condition:</label>
-                <select id="e_condition" name="e_condition" required>
-                    <option value="OBECNY">OBECNY</option>
-                    <option value="DELEGACJA">DELEGACJA</option>
-                    <option value="CHORY">CHORY</option>
-                    <option value="NIEOBECNY">NIEOBECNY</option>
-                </select><br><br>
-                <input type="submit" value="Submit">
-            </form>
-            <p>Delete</p>
-            <form id="delete_e">
-                <label for="employee_id">ID:</label>
-                <input type="text" id="employee_id" name="id" required><br><br>
-                <input type="button" value="Delete" onclick="deleteEmployee(document.getElementById('employee_id').value)">
-            </form>
-
-
-<div class="header">
-    <p id="scroll_group" class="header--text">Groups</p>
-    <a href="/api/group_table" class="header--link">View table</a>
-</div>
-
-            <p>Add</p>
-            <form action="/api/group" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="g_name" name="name" required><br><br>
-
-                <label for="max">Max employees:</label>
-                <input type="number" id="max" name="max" required><br><br>
-
-                <input type="submit" value="Submit">
-            </form>
-            <p>Delete</p>
-            <form id="delete_g">
-                <label for="g_id">ID:</label>
-                <input type="text" id="g_id" name="id" required><br><br>
-                <input type="button" value="Delete" onclick="deleteGroup(document.getElementById('g_id').value)">
-            </form>
-
-
-<div class="header">
-    <p id="scroll_rate" class="header--text">Rates</p>
-    <a href="/api/rate_table" class="header--link">View table</a>
-</div>
-
+    <p>Add</p>
+    <form action="/api/employee" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="lastname">Lastname:</label>
+        <input type="text" id="lastname" name="lastname" required><br><br>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br><br>
+        <label for="salary">Salary:</label>
+        <input type="number" id="salary" name="salary" required min="0"><br><br>
+        <label for="condition">Condition:</label>
+        <select id="condition" name="condition" required>
+            <option value="OBECNY">OBECNY</option>
+            <option value="DELEGACJA">DELEGACJA</option>
+            <option value="CHORY">CHORY</option>
+            <option value="NIEOBECNY">NIEOBECNY</option>
+        </select><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p>Change condition</p>
+    <form action="/api/employee_condition" method="POST">
+        <label for="e_id">ID:</label>
+        <input type="number" id="e_id" name="id" required min="1"><br><br>
+        <label for="e_condition">Condition:</label>
+        <select id="e_condition" name="e_condition" required>
+            <option value="OBECNY">OBECNY</option>
+            <option value="DELEGACJA">DELEGACJA</option>
+            <option value="CHORY">CHORY</option>
+            <option value="NIEOBECNY">NIEOBECNY</option>
+        </select><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p>Delete</p>
+    <form id="delete_e">
+        <label for="employee_id">ID:</label>
+        <input type="text" id="employee_id" name="id" required><br><br>
+        <input type="button" value="Delete" onclick="deleteEmployee(document.getElementById('employee_id').value)">
+    </form>
+    <div class="header">
+        <p id="scroll_group" class="header--text">Groups</p>
+        <a href="/api/group_table" class="header--link">View table</a>
+    </div>
+    <p>Add</p>
+    <form action="/api/group" method="POST">
+        <label for="g_name">Name:</label>
+        <input type="text" id="g_name" name="name" required><br><br>
+        <label for="max">Max employees:</label>
+        <input type="number" id="max" name="max" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p>Add employee to group</p>
+    <form action="/api/employee_to_group" method="POST">
+        <label for="a_g_id">Group ID:</label>
+        <input type="number" id="a_g_id" name="gr_id" required><br><br>
+        <label for="a_e_id">Employee ID:</label>
+        <input type="number" id="a_e_id" name="emp_id" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p>Remove employee from group</p>
+    <form id="remove_e_from_g">
+        <label for="r_g_id">Group ID:</label>
+        <input type="number" id="r_g_id" name="gr_id" required><br><br>
+        <label for="r_e_id">Employee ID:</label>
+        <input type="number" id="r_e_id" name="emp_id" required><br><br>
+        <input type="button" value="Remove"
+               onclick="removeEmployeeFromGroup(document.getElementById('r_g_id').value,document.getElementById('r_e_id').value)">
+    </form>
+    <p>Delete</p>
+    <form id="delete_g">
+        <label for="g_id">ID:</label>
+        <input type="text" id="g_id" name="id" required><br><br>
+        <input type="button" value="Delete" onclick="deleteGroup(document.getElementById('g_id').value)">
+    </form>
+    <div class="header">
+        <p id="scroll_rate" class="header--text">Rates</p>
+        <a href="/api/rate_table" class="header--link">View table</a>
+    </div>
     <p>Add</p>
     <form action="/api/rate" method="POST">
         <label for="value">Value:</label>
         <input type="number" id="value" name="value" required min="0" max="6"><br><br>
-
         <label for="group_id">Group ID:</label>
         <input type="text" id="group_id" name="group_id" required><br><br>
-
         <label for="comment">Comment:</label>
         <input type="text" id="comment" name="comment" required><br><br>
-
         <input type="submit" value="Submit">
     </form>
-
+    <p>Delete</p>
+    <form id="delete_r">
+        <label for="rate_id">ID:</label>
+        <input type="text" id="rate_id" name="id" required><br><br>
+        <input type="button" value="Delete" onclick="deleteRate(document.getElementById('rate_id').value)">
+    </form>
 </div>
-
 </body>
 </html>

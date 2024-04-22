@@ -1,7 +1,6 @@
 package com.example.CompanyManager;
 
 import jakarta.persistence.*;
-import org.hibernate.Session;
 
 import java.time.LocalDate;
 
@@ -25,12 +24,15 @@ public class Rate {
   @Column(name = "comment", nullable = false)
   private String comment;
 
-  public Rate(){}
+  public Rate() {
+  }
+
   public Rate(int value, ClassEmployee group, String comment) {
     setValue(value);
     setComment(comment);
     setGroup(group);
   }
+
   public void setValue(int value) {
     if (value < 0 || value > 6) {
       throw new IllegalArgumentException("Ocena musi byc wartoscia z przedzialu 0 - 6.");
@@ -53,6 +55,19 @@ public class Rate {
     this.group = group;
   }
 
+  public void setComment(String comment) {
+    this.comment = comment;
+  }
+
+  public String toString() {
+    return "[" + rate_id +
+            ", " + value +
+            ", " + group.getName() +
+            ", " + date +
+            ", " + comment +
+            ']';
+  }
+
   public LocalDate getDate() {
     return this.date;
   }
@@ -61,22 +76,7 @@ public class Rate {
     return this.comment;
   }
 
-  public void setComment(String comment) {
-    this.comment = comment;
-  }
-  public String toString(){
-    return "Ocena{" +
-            "id=" + rate_id +
-            ", value='" + value + '\'' +
-            ", group='" + group.getName() + '\'' +
-            ", date='" + date + '\'' +
-            ", comment='" + comment + '\'' +
-            '}';
-  }
-  public void addToDB(Session session){
-    session.beginTransaction();
-    session.save(this);
-    session.getTransaction().commit();
-    //session.update(this);
+  public int getRate_id() {
+    return this.rate_id;
   }
 }

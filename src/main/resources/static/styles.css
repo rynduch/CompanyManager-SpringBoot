@@ -7,6 +7,7 @@
     outline: none;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    font-weight: lighter;
 }
 
 body {
@@ -79,6 +80,11 @@ p {
     margin: 15px;
 }
 
+h1 {
+    font-family: 'Georgia', Sans-Serif, sans-serif;
+    font-weight: lighter;
+}
+
 .header--text {
     font-size: 20px;
     font-weight: bold;
@@ -94,7 +100,7 @@ input[type=text], input[type=date], input[type=number] {
     color: black;
     padding: 5px 5px;
     cursor: text;
-    border: solid #b9b9b9 1px ;
+    border: solid #b9b9b9 1px;
     border-radius: 7px;
     margin: 7px;
 }
@@ -146,7 +152,7 @@ select {
     padding: 10px 20px;
 }
 
-.table tbody tr:nth-of-type(even){
+.table tbody tr:nth-of-type(even) {
     background: #eeeeee;
 }
 
@@ -164,4 +170,5 @@ select {
     justify-content: space-between;
     align-items: center;
     margin: 20px;
+    margin-left: 0;
 }
