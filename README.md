@@ -19,6 +19,6 @@ You can run the project by executing the following command:
 ```
 ./mvnw spring-boot:run
 ```
-Make sure you are in the directory `CompanyManager` before executing the command.
+Make sure you are in the directory `CompanyManager-SpringBoot` before executing the command.
 
 The application should be listened to on port: http://localhost:8080/api.
