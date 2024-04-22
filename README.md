@@ -22,3 +22,14 @@ You can run the project by executing the following command:
 Make sure you are in the directory `CompanyManager-SpringBoot` before executing the command.
 
 The application should be listened to on port: http://localhost:8080/api.
+
+## Screenshots
+
+Home page
+![home_page.png](home_page.png)
+
+Groups tab
+![groups_tab.png](groups_tab.png)
+
+Employee table view
+![employee_table_view.png](employee_table_view.png)
